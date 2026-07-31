@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>내 정보</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="card card-wide">
+      <header class="top-bar">
+        <div>
+          <h1>내 등록 정보</h1>
+          <p class="subtitle" id="welcome"></p>
+        </div>
+        <button type="button" id="logout-btn" class="btn-inline">로그아웃</button>
+      </header>
+
+      <section class="info-panel">
+        <h2 class="section-title">계정</h2>
+        <dl class="info-dl" id="my-info"></dl>
+      </section>
+
+      <section class="info-panel hidden" id="all-users-section">
+        <h2 class="section-title">전체 이용자 (root)</h2>
+        <div class="table-wrap">
+          <table class="user-table">
+            <thead>
+              <tr>
+                <th>사용자 이름</th>
+                <th>등록 일시</th>
+              </tr>
+            </thead>
+            <tbody id="all-users-body"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <div id="message" class="message" role="status"></div>
+    </div>
+    <script src="/js/dashboard.js"></script>
+  </body>
+</html>

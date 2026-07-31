@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>회원 등록</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="card">
+      <h1>회원 등록</h1>
+      <p class="subtitle">새 계정을 만듭니다.</p>
+      <form id="register-form">
+        <label for="username">사용자 이름</label>
+        <input id="username" name="username" type="text" autocomplete="username" required />
+
+        <label for="password">비밀번호 (4자 이상)</label>
+        <input
+          id="password"
+          name="password"
+          type="password"
+          autocomplete="new-password"
+          minlength="4"
+          required
+        />
+
+        <button type="submit">등록</button>
+      </form>
+      <div id="message" class="message" role="status"></div>
+      <p class="footer-link">이미 계정이 있으신가요? <a href="/login.html">로그인</a></p>
+    </div>
+    <script src="/js/auth-form.js"></script>
+    <script>
+      bindAuthForm("register-form", "/register");
+    </script>
+  </body>
+</html>
